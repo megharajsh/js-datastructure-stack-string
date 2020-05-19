@@ -24,13 +24,24 @@ Stack.prototype.pop = function() {
 }
 
 Stack.prototype.size = function() {
-  
+  console.log(this.storage.match(/,/g));
+  return (this.storage.match(/,/g) || []).length;
 }
 
 var myStack = new Stack();
 myStack.push('Book');
+appDiv.innerHTML+= `Push: Book, Size: ${myStack.size()}<br>`;
 myStack.push('Pencil');
+appDiv.innerHTML+= `Push: Pencil, Size: ${myStack.size()}<br>`;
 myStack.push('Eraser');
+appDiv.innerHTML+= `Push: Eraser, Size: ${myStack.size()}<br>`;
 myStack.push('Pen');
+appDiv.innerHTML+= `Push: Pen, Size: ${myStack.size()}<br><br>`;
 
-myStack.pop();
+appDiv.innerHTML+= `Pop: ${myStack.pop()}, Size: ${myStack.size()}<br>`;
+appDiv.innerHTML+= `Pop: ${myStack.pop()}, Size: ${myStack.size()}<br><br>`;
+
+myStack.push('Notebook');
+appDiv.innerHTML+= `Push: Notebook, Size: ${myStack.size()}<br><br>`;
+
+appDiv.innerHTML+= `Pop: ${myStack.pop()}, Size: ${myStack.size()}<br>`;
