@@ -3,7 +3,7 @@ import './style.css';
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1><hr>`;
+appDiv.innerHTML = `<h1>JS Datastructure - Stack Implementation Using Strings</h1><hr>`;
 
 
 function Stack() {
